@@ -2,56 +2,117 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>A.R.S. — Adaptive Radiation Shielding</title>
-
-  <!-- Link CSS -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A.R.S. - Adaptive Radioprotective System</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <header>
-    <h1>A.R.S.</h1>
-    <p>Adaptive Radiation Shielding</p>
-  </header>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">A.R.S.</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#design">Design</a></li>
+      <li><a href="#tech">Tech</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#references">References</a></li>
+    </ul>
+  </nav>
 
-  <section>
-    <h2>The Problem</h2>
-    <p>
-      Radiation is a critical threat in deep-space exploration and cancer care.
-      Existing protection is passive, bulky, and biologically unaware.
-    </p>
+  <!-- HOME SECTION -->
+  <section id="home" class="section home">
+    <div class="content">
+      <h1>A.R.S.</h1>
+      <h2>Adaptive Radioprotective System</h2>
+      <p>Intelligent protection for humans where radiation is unavoidable.</p>
+      <a href="#design" class="btn">Explore Design</a>
+    </div>
+
+    <!-- YouTube video -->
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/fbvlUfvVyrg" 
+              title="A.R.S. Demo Video"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+      </iframe>
+    </div>
   </section>
 
-  <section>
-    <h2>The Solution</h2>
-    <p>
-      A.R.S. is a modular, intelligent wearable system that integrates physical
-      shielding, real-time sensing, and biologically informed mitigation.
-    </p>
+  <!-- DESIGN SECTION -->
+  <section id="design" class="section design">
+    <div class="content">
+      <h2>Design: Six Functional Layers</h2>
+      <p>A.R.S. is composed of six layers, each providing targeted protection and modular functionality.</p>
+
+      <div class="layer-cards">
+        <div class="layer-card">
+          <h3>Outer Structural Layer</h3>
+          <p class="layer-description">Provides mechanical durability and environmental protection for all internal components.</p>
+        </div>
+        <div class="layer-card">
+          <h3>Hydrogen-Rich Layer</h3>
+          <p class="layer-description">Reduces secondary particle generation that contributes to biological damage.</p>
+        </div>
+        <div class="layer-card">
+          <h3>Absorber Layer</h3>
+          <p class="layer-description">Attenuates deep-penetrating radiation including neutron interactions.</p>
+        </div>
+        <div class="layer-card">
+          <h3>Sensor & Dosimetry Layer</h3>
+          <p class="layer-description">Tracks real-time and cumulative radiation exposure for adaptive response.</p>
+        </div>
+        <div class="layer-card">
+          <h3>Biological Mitigation Layer</h3>
+          <p class="layer-description">Supports cellular repair and reduces downstream oxidative stress.</p>
+        </div>
+        <div class="layer-card">
+          <h3>Inner Comfort Layer</h3>
+          <p class="layer-description">Ensures thermal regulation and wearability for long-term use.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section>
-  <h2>Demonstration Video</h2>
-  <p>
-    This video demonstrates the concept, motivation, and early development
-    of A.R.S. (Adaptive Radiation Shielding).
-  </p>
+  <!-- TECH SECTION -->
+  <section id="tech" class="section tech">
+    <div class="content">
+      <h2>Technology</h2>
+      <p>A.R.S. integrates sensing, shielding, and biological mitigation into a single adaptive system. It is modular, scalable, and designed for both space and medical applications.</p>
+    </div>
+  </section>
 
-  <div class="video-container">
-    <iframe
-      src="https://www.youtube.com/embed/fbvlUfvVyrg"
-      title="A.R.S. Demonstration Video"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-  </div>
-</section>
+  <!-- TEAM SECTION -->
+  <section id="team" class="section team">
+    <div class="content">
+      <h2>Team</h2>
+      <p>The team combines scientific research experience, engineering design, and systems thinking to develop A.R.S.</p>
+      <ul>
+        <li><strong>Sragvi:</strong> Lead & DNA Damage Research</li>
+        <li><strong>Member 2:</strong> Engineering Design</li>
+        <li><strong>Member 3:</strong> Systems Integration & Prototype Development</li>
+      </ul>
+    </div>
+  </section>
 
-
-  <!-- Link JavaScript -->
-  <script src="script.js"></script>
+  <!-- REFERENCES SECTION -->
+  <section id="references" class="section references">
+    <div class="content">
+      <h2>References</h2>
+      <ul>
+        <li>Biological Effects of Ionizing Radiation on DNA and Cellular Integrity</li>
+        <li>Space Radiation Environment and Human Health Risk</li>
+        <li>Limitations of Current Radiation Protection Approaches</li>
+        <li>DNA Repair Pathways and Cellular Recovery Following Radiation Exposure</li>
+        <li>Secondary Particle Generation and Neutron Interactions in Radiation Shielding</li>
+        <li>Radiation Dosimetry, Wearable Sensors, and Exposure Monitoring</li>
+        <li>Radiation Therapy Side Effects and Protection of Healthy Tissue</li>
+        <li>Hydrogen-Rich and Advanced Materials for Radiation Attenuation</li>
+        <li>Dual-Use Radiation Safety Technologies in Aerospace and Medicine</li>
+      </ul>
+    </div>
+  </section>
 
 </body>
 </html>
