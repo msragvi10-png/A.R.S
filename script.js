@@ -1,1 +1,1 @@
-This is for js.
+console.log("A.R.S. website loaded successfully");
