@@ -8,7 +8,6 @@ body, html {
   background-color: #121d2b;
 }
 
-/* MAIN HEADER */
 .main-header {
   display: flex;
   justify-content: space-between;
@@ -22,33 +21,34 @@ body, html {
   z-index: 1000;
 }
 
+/* Main Heading */
 .header-left h1 {
   margin: 0;
   font-size: 1.8em;
 }
 
-.header-right ul {
+/* Navbar links */
+.header-right ul.nav-links {
+  display: flex;           /* Make horizontal */
   list-style: none;
-  display: flex;
   margin: 0;
   padding: 0;
 }
 
-.header-right ul li {
-  margin-left: 30px;
+.header-right ul.nav-links li {
+  margin-left: 30px;       /* Space between links */
 }
 
-.header-right ul li a {
+.header-right ul.nav-links li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s;
 }
 
-.header-right ul li a:hover {
+.header-right ul.nav-links li a:hover {
   color: #ffcc00; /* Hover accent color */
 }
-
 /* SECTIONS */
 .section {
   min-height: 100vh;
