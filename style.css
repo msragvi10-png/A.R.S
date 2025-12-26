@@ -13,21 +13,21 @@ body, html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 30px; /* reduced side padding to fit all links */
+  padding: 15px 30px; /* reduced side padding */
   background-color: #007acc; /* Blue background */
   color: white;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
-  flex-wrap: wrap; /* allows wrapping on smaller screens */
+  flex-wrap: wrap; /* wrap links on smaller screens */
 }
 
 /* Main Heading */
 .header-left h1 {
   margin: 0;
   font-size: 1.8em;
-  flex: 1; /* take up available space */
+  flex: 1;
 }
 
 /* Navbar links horizontal */
@@ -51,22 +51,26 @@ body, html {
 }
 
 .header-right ul.nav-links li a:hover {
-  color: #ffcc00; /* Hover accent color */
+  color: #ffcc00;
 }
 
 /* SECTIONS */
 .section {
   min-height: 100vh;
-  padding: 50px 50px 50px 50px; /* normal spacing for all sections */
+  padding: 50px 50px 50px 50px; /* normal spacing */
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-/* Offset only for first section (Home) to clear fixed header */
+/* HOME SECTION */
 .home {
-  padding-top: 120px;
+  padding-top: 120px; /* offset for fixed header */
   text-align: center;
+}
+
+.home .content {
+  margin-bottom: 50px; /* spacing between button and video */
 }
 
 .home h2 {
@@ -97,11 +101,11 @@ body, html {
 /* VIDEO */
 .video-container {
   position: relative;
-  padding-bottom: 56.25%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
   height: 0;
   overflow: hidden;
   max-width: 900px;
-  margin: 50px auto;
+  margin: 0 auto 50px auto; /* spacing below video */
 }
 
 .video-container iframe {
@@ -162,16 +166,4 @@ ul li {
 
 /* RESPONSIVE ADJUSTMENTS */
 @media screen and (max-width: 900px) {
-  .main-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .header-right ul.nav-links {
-    margin-top: 10px;
-    flex-wrap: wrap;
-  }
-  .header-right ul.nav-links li {
-    margin-left: 15px;
-    margin-bottom: 5px;
-  }
-}
+  .
