@@ -36,7 +36,7 @@ body {
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px; /* space between shield and text */
+  gap: 10px;
   position: fixed;
   top: 22px;
   left: 30px;
@@ -46,7 +46,7 @@ body {
 .logo .shield {
   width: 36px;
   height: 36px;
-  margin-bottom: 2px;   /* nudge shield slightly down to align with text */
+  margin-bottom: 2px;
 }
 
 .logo-text {
@@ -89,7 +89,7 @@ body {
   overflow: hidden;
 }
 
-/* 🔴 AURA RADIATION BACKGROUND */
+/* AURA */
 .hero::before {
   content: "";
   position: absolute;
@@ -153,21 +153,20 @@ body {
   color: var(--crimson);
 }
 
-/* BIG REVOLVING TEXT */
+/* MARQUEE */
 .revolving-text {
   overflow: hidden;
   padding: 80px 0;
   background: var(--offwhite);
-  position: relative;
 }
 
 .marquee span {
   display: inline-block;
   white-space: nowrap;
-  font-size: 96px; /* HUGE text */
+  font-size: 96px;
   font-weight: 800;
   letter-spacing: 12px;
-  color: rgba(184,26,26,0.15); /* faded crimson */
+  color: rgba(184,26,26,0.15);
   animation: scroll 90s linear infinite;
 }
 
