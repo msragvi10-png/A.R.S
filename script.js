@@ -1,29 +1,44 @@
-/* CUSTOM CURSOR */
+/* ================================
+   CUSTOM CURSOR (SAFE)
+================================ */
+
 const cursor = document.querySelector('.cursor');
 
-document.addEventListener('mousemove', e => {
-  cursor.style.left = e.clientX + 'px';
-  cursor.style.top = e.clientY + 'px';
-});
+if (cursor) {
+  document.addEventListener('mousemove', (e) => {
+    cursor.style.left = `${e.clientX}px`;
+    cursor.style.top = `${e.clientY}px`;
+  });
+}
 
-/* ACTIVE NAV ON SCROLL */
+/* ================================
+   ACTIVE NAV ON SCROLL
+================================ */
+
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('.side-nav a');
 
-window.addEventListener('scroll', () => {
-  let current = '';
+if (sections.length && navLinks.length) {
+  window.addEventListener('scroll', () => {
+    let currentSection = '';
 
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop - 200;
-    if (pageYOffset >= sectionTop) {
-      current = section.getAttribute('id');
-    }
-  });
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 200;
+      const sectionHeight = section.offsetHeight;
 
-  navLinks.forEach(link => {
-    link.classList.remove('active');
-    if (link.getAttribute('href') === `#${current}`) {
-      link.classList.add('active');
-    }
+      if (
+        window.pageYOffset >= sectionTop &&
+        window.pageYOffset < sectionTop + sectionHeight
+      ) {
+        currentSection = section.getAttribute('id');
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === `#${currentSection}`) {
+        link.classList.add('active');
+      }
+    });
   });
-});
+}
