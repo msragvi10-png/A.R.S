@@ -6,7 +6,7 @@ document.addEventListener('mousemove', e => {
   cursor.style.top = e.clientY + 'px';
 });
 
-/* ACTIVE NAV ON SCROLL */
+/* ACTIVE NAV */
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('.side-nav a');
 
