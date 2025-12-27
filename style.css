@@ -32,18 +32,6 @@ body {
   transform: translate(-50%, -50%);
 }
 
-/* LOGO */
-.logo {
-  position: fixed;
-  top: 24px;
-  left: 32px;
-  z-index: 1000;
-}
-
-.logo img {
-  height: 42px;
-}
-
 /* NAV */
 .side-nav {
   position: fixed;
@@ -156,7 +144,7 @@ body {
   font-weight: 800;
   letter-spacing: 12px;
   color: rgba(184,26,26,0.15); /* faded crimson */
-  animation: scroll 25s linear infinite;
+  animation: scroll 60s linear infinite;
 }
 
 @keyframes scroll {
