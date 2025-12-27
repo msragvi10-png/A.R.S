@@ -5,19 +5,28 @@
   box-sizing: border-box;
 }
 
+/* COLORS */
+:root {
+  --crimson: #B81A1A;
+  --black: #0e0e0e;
+  --offwhite: #f7f6f4;
+  --gray: #777;
+}
+
 /* BODY */
 body {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  background: #f2eff8;
-  color: #111;
+  font-family: 'Inter', sans-serif;
+  background: var(--offwhite);
+  color: var(--black);
+  cursor: none; /* IMPORTANT: hide default cursor */
   overflow-x: hidden;
 }
 
 /* CUSTOM CURSOR */
 .cursor {
-  width: 14px;
-  height: 14px;
-  background: #6c5ce7;
+  width: 12px;
+  height: 12px;
+  background: var(--crimson);
   border-radius: 50%;
   position: fixed;
   pointer-events: none;
@@ -28,13 +37,13 @@ body {
 /* LOGO */
 .logo {
   position: fixed;
-  top: 25px;
-  left: 30px;
+  top: 24px;
+  left: 32px;
   z-index: 1000;
 }
 
 .logo img {
-  height: 40px;
+  height: 42px;
 }
 
 /* SIDE NAV */
@@ -45,41 +54,70 @@ body {
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 22px;
   z-index: 1000;
 }
 
 .side-nav a {
+  font-family: 'Plus Jakarta Sans', sans-serif;
   text-decoration: none;
-  color: #888;
+  color: var(--gray);
   font-size: 14px;
   transition: color 0.3s;
 }
 
 .side-nav a:hover,
 .side-nav a.active {
-  color: #000;
+  color: var(--crimson);
 }
 
 /* HERO */
 .hero {
+  position: relative;
   min-height: 100vh;
   display: flex;
   align-items: center;
   padding: 120px 100px;
+  overflow: hidden;
+}
+
+/* RADIATION BACKGROUND */
+.radiation-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 30% 40%, rgba(184,26,26,0.15), transparent 40%),
+    radial-gradient(circle at 70% 60%, rgba(184,26,26,0.1), transparent 45%);
+  animation: pulse 6s infinite alternate ease-in-out;
+  z-index: 0;
+}
+
+@keyframes pulse {
+  from { opacity: 0.6; }
+  to { opacity: 1; }
+}
+
+/* HERO CONTENT */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
   gap: 120px;
 }
 
 .hero-left h1 {
-  font-size: 120px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 130px;
   font-weight: 800;
+  color: var(--crimson);
   letter-spacing: 2px;
 }
 
 .hero-left h2 {
-  font-size: 28px;
-  font-weight: 400;
-  margin-top: 10px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 26px;
+  font-weight: 500;
+  margin-top: 12px;
 }
 
 .hero-right {
@@ -88,84 +126,84 @@ body {
 
 .tagline {
   font-size: 20px;
-  margin-bottom: 30px;
-  line-height: 1.4;
+  line-height: 1.5;
+  margin-bottom: 36px;
 }
 
 /* BUTTONS */
 .hero-buttons {
   display: flex;
-  gap: 15px;
+  gap: 16px;
 }
 
 .btn {
-  padding: 12px 22px;
-  border-radius: 30px;
-  text-decoration: none;
+  padding: 14px 26px;
+  border-radius: 40px;
   font-size: 14px;
+  text-decoration: none;
   transition: all 0.3s;
 }
 
 .btn.primary {
-  background: #111;
-  color: #fff;
+  background: var(--crimson);
+  color: white;
 }
 
 .btn.primary:hover {
-  background: #6c5ce7;
+  background: var(--black);
 }
 
 .btn.secondary {
-  border: 1px solid #111;
-  color: #111;
+  border: 1px solid var(--crimson);
+  color: var(--crimson);
 }
 
 .btn.secondary:hover {
-  background: #111;
-  color: #fff;
+  background: var(--crimson);
+  color: white;
 }
 
 /* WORD FLOW */
 .word-flow {
   overflow: hidden;
-  padding: 30px 0;
-  background: #fff;
+  background: white;
+  padding: 36px 0;
 }
 
 .word-track {
   display: flex;
-  gap: 60px;
-  animation: scrollWords 20s linear infinite;
-  font-size: 60px;
+  gap: 80px;
+  animation: scrollWords 25s linear infinite;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 52px;
   font-weight: 700;
-  opacity: 0.15;
+  opacity: 0.12;
   white-space: nowrap;
 }
 
 @keyframes scrollWords {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
-/* SECTIONS PLACEHOLDERS */
+/* PLACEHOLDER SECTIONS */
 .section {
   min-height: 100vh;
 }
 
-/* FADE IN ANIMATION */
+/* FADE IN */
 .fade-in {
-  opacity: 0;
-  transform: translateY(40px);
   animation: fadeUp 1.2s ease forwards;
 }
 
 @keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
+
