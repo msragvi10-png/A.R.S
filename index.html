@@ -5,22 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>A.R.S. | Adaptive Radioprotective System</title>
 
-  <!-- GOOGLE FONTS -->
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <!-- CUSTOM CURSOR -->
   <div class="cursor"></div>
 
-  <!-- LOGO -->
   <div class="logo">
     <img src="assets/logo.png" alt="A.R.S. Logo">
   </div>
 
-  <!-- SIDE NAV -->
   <nav class="side-nav">
     <a href="#home" class="active">Home</a>
     <a href="#design">Design</a>
@@ -31,9 +27,7 @@
 
   <!-- HERO -->
   <section id="home" class="hero">
-    <div class="radiation-bg"></div>
-
-    <div class="hero-content fade-in">
+    <div class="hero-content">
       <div class="hero-left">
         <h1>A.R.S.</h1>
         <h2>Adaptive Radioprotective System</h2>
@@ -45,36 +39,22 @@
         </p>
 
         <div class="hero-buttons">
-          <a href="https://www.youtube.com/watch?v=fbvlUfvVyrg" target="_blank" class="btn primary">
-            Watch Innovation Video
-          </a>
-          <a href="#design" class="btn secondary">
-            Learn More
-          </a>
+          <a href="#" class="btn primary">Watch Innovation Video</a>
+          <a href="#design" class="btn secondary">Learn More</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- IONIZING FIELD FLOW VISUAL -->
-  <section class="ionizing-field">
-    <svg viewBox="0 0 1200 300" preserveAspectRatio="none">
-
-      <!-- Radiation source nodes -->
-      <circle cx="150" cy="150" r="40" fill="#B81A1A" opacity="0.12"/>
-      <circle cx="350" cy="120" r="28" fill="#B81A1A" opacity="0.10"/>
-      <circle cx="350" cy="190" r="22" fill="#B81A1A" opacity="0.08"/>
-
-      <!-- Particle paths -->
-      <path d="M150 150 C 400 80, 700 120, 1100 100" class="particle"/>
-      <path d="M150 150 C 420 180, 720 200, 1100 180" class="particle faint"/>
-      <path d="M150 150 C 380 140, 700 160, 1100 150" class="particle accent"/>
-      <path d="M150 150 C 450 110, 750 90, 1100 70" class="particle faint"/>
-
-    </svg>
+  <!-- REVOLVING / FLOWING TEXT (RESTORED POSITION) -->
+  <section class="revolving-text">
+    <div class="marquee">
+      <span>
+        ADAPTIVE • RADIATION • HUMAN-CENTERED • AEROSPACE • MEDICINE • SYSTEMS •
+      </span>
+    </div>
   </section>
 
-  <!-- PLACEHOLDER SECTIONS -->
   <section id="design" class="section"></section>
   <section id="tech" class="section"></section>
   <section id="team" class="section"></section>
