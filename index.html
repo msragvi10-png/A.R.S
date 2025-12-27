@@ -1,105 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>A.R.S. - Adaptive Radioprotective System</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>A.R.S. | Adaptive Radioprotective System</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- HEADER / NAVBAR -->
-  <header class="main-header">
-    <div class="header-left">
-      <h1>Adaptive Radioprotective System</h1>
+  <!-- Custom Cursor -->
+  <div class="cursor"></div>
+
+  <!-- LOGO -->
+  <div class="logo">
+    <img src="assets/logo.png" alt="A.R.S. Logo">
+  </div>
+
+  <!-- RIGHT SIDE NAV -->
+  <nav class="side-nav">
+    <a href="#home" class="active">Home</a>
+    <a href="#design">Design</a>
+    <a href="#tech">Tech</a>
+    <a href="#team">Team</a>
+    <a href="#references">References</a>
+  </nav>
+
+  <!-- HERO / HOME -->
+  <section id="home" class="hero fade-in">
+    <div class="hero-left">
+      <h1>A.R.S.</h1>
+      <h2>Adaptive Radioprotective System</h2>
     </div>
-    <nav class="header-right">
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#design">Design</a></li>
-        <li><a href="#tech">Tech</a></li>
-        <li><a href="#team">Team</a></li>
-        <li><a href="#references">Ref</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <!-- HOME SECTION -->
-  <section id="home" class="section home">
-    <div class="content">
-      <h2>A.R.S.</h2>
-      <p>Intelligent protection for humans where radiation is unavoidable.</p>
-      <a href="#design" class="btn">Explore Design</a>
-    </div>
+    <div class="hero-right">
+      <p class="tagline">
+        Intelligent protection where radiation is unavoidable.
+      </p>
 
-    <!-- Embedded YouTube Video -->
-    <div class="video-container">
-      <iframe src="https://www.youtube.com/embed/fbvlUfvVyrg" 
-              title="A.R.S. Demo Video"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen>
-      </iframe>
-    </div>
-  </section>
-
-  <!-- DESIGN SECTION -->
-  <section id="design" class="section design">
-    <div class="content">
-      <h2>Design: Six Functional Layers</h2>
-      <p>A.R.S. is composed of six layers, each providing targeted protection and modular functionality.</p>
-
-      <div class="layer-cards">
-        <div class="layer-card">
-          <h3>Outer Structural Layer</h3>
-          <p class="layer-description">Provides mechanical durability and environmental protection for all internal components.</p>
-        </div>
-        <div class="layer-card">
-          <h3>Hydrogen-Rich Layer</h3>
-          <p class="layer-description">Reduces secondary particle generation that contributes to biological damage.</p>
-        </div>
-        <div class="layer-card">
-          <h3>Absorber Layer</h3>
-          <p class="layer-description">Attenuates deep-penetrating radiation including neutron interactions.</p>
-        </div>
-        <div class="layer-card">
-          <h3>Sensor & Dosimetry Layer</h3>
-          <p class="layer-description">Tracks real-time and cumulative radiation exposure for adaptive response.</p>
-        </div>
-        <div class="layer-card">
-          <h3>Biological Mitigation Layer</h3>
-          <p class="layer-description">Supports cellular repair and reduces downstream oxidative stress.</p>
-        </div>
-        <div class="layer-card">
-          <h3>Inner Comfort Layer</h3>
-          <p class="layer-description">Ensures thermal regulation and wearability for long-term use.</p>
-        </div>
+      <div class="hero-buttons">
+        <a href="https://www.youtube.com/watch?v=fbvlUfvVyrg" target="_blank" class="btn primary">
+          Watch Video
+        </a>
+        <a href="#design" class="btn secondary">
+          Learn More
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- TECH SECTION -->
-  <section id="tech" class="section tech">
-    <div class="content">
-      <h2>Technology</h2>
-      <p>A.R.S. integrates sensing, shielding, and biological mitigation into a single adaptive system. It is modular, scalable, and designed for both space and medical applications.</p>
+  <!-- REVOLVING WORDS STRIP -->
+  <section class="word-flow">
+    <div class="word-track">
+      <span>SPACE</span>
+      <span>MEDICINE</span>
+      <span>RADIATION</span>
+      <span>BIOPHYSICS</span>
+      <span>PROTECTION</span>
+      <span>ADAPTIVE</span>
+      <span>SPACE</span>
+      <span>MEDICINE</span>
+      <span>RADIATION</span>
     </div>
   </section>
 
-  <!-- TEAM SECTION -->
-  <section id="team" class="section team">
-    <div class="content">
-      <h2>Team</h2>
-      <p>The team combines scientific research experience, engineering design, and systems thinking to develop A.R.S.</p>
-      <ul>
-        <li><strong>Sragvi:</strong> Lead & DNA Damage Research</li>
-        <li><strong>Member 2:</strong> Engineering Design</li>
-        <li><strong>Member 3:</strong> Systems Integration & Prototype Development</li>
-      </ul>
-    </div>
-  </section>
+  <!-- PLACEHOLDER SECTIONS -->
+  <section id="design" class="section fade-in"></section>
+  <section id="tech" class="section fade-in"></section>
+  <section id="team" class="section fade-in"></section>
+  <section id="references" class="section fade-in"></section>
 
-  <!-- REFERENCES SECTION -->
-  <section id="references" class="section references">
-    <div class="content">
-      <h2>References
+  <script src="script.js"></script>
+</body>
+</html>
