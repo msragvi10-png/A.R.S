@@ -38,8 +38,8 @@ body {
   align-items: center;
   gap: 10px; /* space between shield and text */
   position: fixed;
-  top: 24px;
-  left: 32px;
+  top: 22px;
+  left: 30px;
   z-index: 1000;
 }
 
