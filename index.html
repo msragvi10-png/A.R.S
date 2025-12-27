@@ -56,18 +56,22 @@
     </div>
   </section>
 
-  <!-- PROFESSIONAL WORD FLOW -->
-  <section class="word-flow">
-    <div class="word-track">
-      <span>SPACE RADIATION</span>
-      <span>HUMAN HEALTH</span>
-      <span>BIOPHYSICS</span>
-      <span>DNA DAMAGE</span>
-      <span>ADAPTIVE SYSTEMS</span>
-      <span>ONCOLOGY</span>
-      <span>AEROSPACE MEDICINE</span>
-      <span>RISK MITIGATION</span>
-    </div>
+  <!-- IONIZING FIELD FLOW VISUAL -->
+  <section class="ionizing-field">
+    <svg viewBox="0 0 1200 300" preserveAspectRatio="none">
+
+      <!-- Radiation source nodes -->
+      <circle cx="150" cy="150" r="40" fill="#B81A1A" opacity="0.12"/>
+      <circle cx="350" cy="120" r="28" fill="#B81A1A" opacity="0.10"/>
+      <circle cx="350" cy="190" r="22" fill="#B81A1A" opacity="0.08"/>
+
+      <!-- Particle paths -->
+      <path d="M150 150 C 400 80, 700 120, 1100 100" class="particle"/>
+      <path d="M150 150 C 420 180, 720 200, 1100 180" class="particle faint"/>
+      <path d="M150 150 C 380 140, 700 160, 1100 150" class="particle accent"/>
+      <path d="M150 150 C 450 110, 750 90, 1100 70" class="particle faint"/>
+
+    </svg>
   </section>
 
   <!-- PLACEHOLDER SECTIONS -->
