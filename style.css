@@ -32,6 +32,29 @@ body {
   transform: translate(-50%, -50%);
 }
 
+/* LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* space between shield and text */
+  position: fixed;
+  top: 24px;
+  left: 32px;
+  z-index: 1000;
+}
+
+.logo .shield {
+  width: 36px;
+  height: 36px;
+}
+
+.logo-text {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--crimson);
+}
+
 /* NAV */
 .side-nav {
   position: fixed;
