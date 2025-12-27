@@ -1,8 +1,3 @@
-
-/* ================================
-   CUSTOM CURSOR (SAFE)
-================================ */
-
 const cursor = document.querySelector('.cursor');
 
 if (cursor) {
@@ -11,10 +6,6 @@ if (cursor) {
     cursor.style.top = `${e.clientY}px`;
   });
 }
-
-/* ================================
-   ACTIVE NAV ON SCROLL
-================================ */
 
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('.side-nav a');
