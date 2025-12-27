@@ -37,13 +37,21 @@ body {
 /* LOGO */
 .logo {
   position: fixed;
-  top: 24px;
+  top: 22px;
   left: 32px;
   z-index: 1000;
 }
 
 .logo img {
   height: 42px;
+  width: auto;
+  image-rendering: auto;
+  transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.logo:hover img {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 8px rgba(184,26,26,0.35));
 }
 
 /* SIDE NAV */
