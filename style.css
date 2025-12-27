@@ -141,21 +141,22 @@ body {
   color: var(--crimson);
 }
 
-/* REVOLVING TEXT */
+/* BIG REVOLVING TEXT */
 .revolving-text {
   overflow: hidden;
-  padding: 40px 0;
-  border-top: 1px solid rgba(0,0,0,0.08);
+  padding: 80px 0;
   background: var(--offwhite);
+  position: relative;
 }
 
 .marquee span {
   display: inline-block;
   white-space: nowrap;
-  font-size: 14px;
-  letter-spacing: 4px;
-  color: rgba(184,26,26,0.7);
-  animation: scroll 18s linear infinite;
+  font-size: 96px; /* HUGE text */
+  font-weight: 800;
+  letter-spacing: 12px;
+  color: rgba(184,26,26,0.15); /* faded crimson */
+  animation: scroll 25s linear infinite;
 }
 
 @keyframes scroll {
