@@ -205,4 +205,14 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+  
+  /* LOGO SVG POLISHING */
+.logo svg {
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.logo:hover svg {
+  transform: rotate(-2deg) scale(1.05);
+  filter: drop-shadow(0 0 6px rgba(184,26,26,0.35));
+}
 }
