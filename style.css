@@ -1,3 +1,4 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -19,6 +20,7 @@ body {
   overflow-x: hidden;
 }
 
+/* CURSOR */
 .cursor {
   width: 12px;
   height: 12px;
@@ -30,6 +32,7 @@ body {
   transform: translate(-50%, -50%);
 }
 
+/* LOGO */
 .logo {
   position: fixed;
   top: 24px;
@@ -37,17 +40,11 @@ body {
   z-index: 1000;
 }
 
-.logo svg {
-  width: 42px;
-  height: auto;
-  transition: transform 0.3s ease, filter 0.3s ease;
+.logo img {
+  height: 42px;
 }
 
-.logo:hover svg {
-  transform: scale(1.05);
-  filter: drop-shadow(0 0 6px rgba(184,26,26,0.4));
-}
-
+/* NAV */
 .side-nav {
   position: fixed;
   right: 40px;
@@ -56,12 +53,13 @@ body {
   display: flex;
   flex-direction: column;
   gap: 22px;
+  z-index: 1000;
 }
 
 .side-nav a {
   text-decoration: none;
-  color: var(--gray);
   font-size: 14px;
+  color: var(--gray);
 }
 
 .side-nav a.active,
@@ -69,27 +67,38 @@ body {
   color: var(--crimson);
 }
 
+/* HERO */
 .hero {
+  position: relative;
   min-height: 100vh;
   padding: 120px 100px;
-  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
 }
 
-.radiation-bg {
+/* 🔴 AURA RADIATION BACKGROUND */
+.hero::before {
+  content: "";
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 30% 40%, rgba(184,26,26,0.15), transparent 40%),
-    radial-gradient(circle at 70% 60%, rgba(184,26,26,0.1), transparent 45%);
+    radial-gradient(circle at 35% 45%, rgba(184,26,26,0.10), transparent 45%),
+    radial-gradient(circle at 65% 55%, rgba(184,26,26,0.08), transparent 50%),
+    radial-gradient(circle at 50% 30%, rgba(184,26,26,0.06), transparent 55%);
+  filter: blur(40px);
+  z-index: 0;
 }
 
 .hero-content {
+  position: relative;
+  z-index: 2;
   display: flex;
   gap: 120px;
-  position: relative;
 }
 
 .hero-left h1 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 130px;
   font-weight: 800;
   color: var(--crimson);
@@ -97,6 +106,7 @@ body {
 
 .hero-left h2 {
   font-size: 26px;
+  margin-top: 12px;
 }
 
 .hero-right {
@@ -108,11 +118,17 @@ body {
   margin-bottom: 36px;
 }
 
+/* BUTTONS */
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+}
+
 .btn {
   padding: 14px 26px;
   border-radius: 40px;
-  text-decoration: none;
   font-size: 14px;
+  text-decoration: none;
 }
 
 .btn.primary {
@@ -125,25 +141,28 @@ body {
   color: var(--crimson);
 }
 
-.word-flow {
-  background: white;
-  padding: 36px 0;
+/* REVOLVING TEXT */
+.revolving-text {
   overflow: hidden;
+  padding: 40px 0;
+  border-top: 1px solid rgba(0,0,0,0.08);
 }
 
-.word-track {
-  display: flex;
-  gap: 80px;
-  font-size: 52px;
-  opacity: 0.12;
-  animation: scroll 25s linear infinite;
+.marquee span {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 14px;
+  letter-spacing: 4px;
+  color: rgba(184,26,26,0.7);
+  animation: scroll 18s linear infinite;
 }
 
 @keyframes scroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from { transform: translateX(100%); }
+  to { transform: translateX(-100%); }
 }
 
+/* SECTIONS */
 .section {
   min-height: 100vh;
 }
