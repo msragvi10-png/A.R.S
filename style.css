@@ -1,11 +1,9 @@
-/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* COLORS */
 :root {
   --crimson: #B81A1A;
   --black: #0e0e0e;
@@ -13,16 +11,14 @@
   --gray: #777;
 }
 
-/* BODY */
 body {
   font-family: 'Inter', sans-serif;
   background: var(--offwhite);
   color: var(--black);
-  cursor: none; /* IMPORTANT: hide default cursor */
+  cursor: none;
   overflow-x: hidden;
 }
 
-/* CUSTOM CURSOR */
 .cursor {
   width: 12px;
   height: 12px;
@@ -34,27 +30,24 @@ body {
   transform: translate(-50%, -50%);
 }
 
-/* LOGO */
 .logo {
   position: fixed;
-  top: 22px;
+  top: 24px;
   left: 32px;
   z-index: 1000;
 }
 
-.logo img {
-  height: 42px;
-  width: auto;
-  image-rendering: auto;
-  transition: transform 0.35s ease, filter 0.35s ease;
+.logo svg {
+  width: 42px;
+  height: auto;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.logo:hover img {
+.logo:hover svg {
   transform: scale(1.05);
-  filter: drop-shadow(0 0 8px rgba(184,26,26,0.35));
+  filter: drop-shadow(0 0 6px rgba(184,26,26,0.4));
 }
 
-/* SIDE NAV */
 .side-nav {
   position: fixed;
   right: 40px;
@@ -63,69 +56,47 @@ body {
   display: flex;
   flex-direction: column;
   gap: 22px;
-  z-index: 1000;
 }
 
 .side-nav a {
-  font-family: 'Plus Jakarta Sans', sans-serif;
   text-decoration: none;
   color: var(--gray);
   font-size: 14px;
-  transition: color 0.3s;
 }
 
-.side-nav a:hover,
-.side-nav a.active {
+.side-nav a.active,
+.side-nav a:hover {
   color: var(--crimson);
 }
 
-/* HERO */
 .hero {
-  position: relative;
   min-height: 100vh;
-  display: flex;
-  align-items: center;
   padding: 120px 100px;
-  overflow: hidden;
+  position: relative;
 }
 
-/* RADIATION BACKGROUND */
 .radiation-bg {
   position: absolute;
   inset: 0;
   background:
     radial-gradient(circle at 30% 40%, rgba(184,26,26,0.15), transparent 40%),
     radial-gradient(circle at 70% 60%, rgba(184,26,26,0.1), transparent 45%);
-  animation: pulse 6s infinite alternate ease-in-out;
-  z-index: 0;
 }
 
-@keyframes pulse {
-  from { opacity: 0.6; }
-  to { opacity: 1; }
-}
-
-/* HERO CONTENT */
 .hero-content {
-  position: relative;
-  z-index: 1;
   display: flex;
   gap: 120px;
+  position: relative;
 }
 
 .hero-left h1 {
-  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 130px;
   font-weight: 800;
   color: var(--crimson);
-  letter-spacing: 2px;
 }
 
 .hero-left h2 {
-  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 26px;
-  font-weight: 500;
-  margin-top: 12px;
 }
 
 .hero-right {
@@ -134,22 +105,14 @@ body {
 
 .tagline {
   font-size: 20px;
-  line-height: 1.5;
   margin-bottom: 36px;
-}
-
-/* BUTTONS */
-.hero-buttons {
-  display: flex;
-  gap: 16px;
 }
 
 .btn {
   padding: 14px 26px;
   border-radius: 40px;
-  font-size: 14px;
   text-decoration: none;
-  transition: all 0.3s;
+  font-size: 14px;
 }
 
 .btn.primary {
@@ -157,69 +120,30 @@ body {
   color: white;
 }
 
-.btn.primary:hover {
-  background: var(--black);
-}
-
 .btn.secondary {
   border: 1px solid var(--crimson);
   color: var(--crimson);
 }
 
-.btn.secondary:hover {
-  background: var(--crimson);
-  color: white;
-}
-
-/* WORD FLOW */
 .word-flow {
-  overflow: hidden;
   background: white;
   padding: 36px 0;
+  overflow: hidden;
 }
 
 .word-track {
   display: flex;
   gap: 80px;
-  animation: scrollWords 25s linear infinite;
-  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 52px;
-  font-weight: 700;
   opacity: 0.12;
-  white-space: nowrap;
+  animation: scroll 25s linear infinite;
 }
 
-@keyframes scrollWords {
+@keyframes scroll {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 
-/* PLACEHOLDER SECTIONS */
 .section {
   min-height: 100vh;
-}
-
-/* FADE IN */
-.fade-in {
-  animation: fadeUp 1.2s ease forwards;
-}
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  /* LOGO SVG POLISH */
-.logo svg {
-  transition: transform 0.4s ease, filter 0.4s ease;
-}
-
-.logo:hover svg {
-  transform: rotate(-2deg) scale(1.05);
-  filter: drop-shadow(0 0 6px rgba(184,26,26,0.35));
-}
 }
