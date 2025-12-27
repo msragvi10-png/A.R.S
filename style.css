@@ -144,7 +144,7 @@ body {
   font-weight: 800;
   letter-spacing: 12px;
   color: rgba(184,26,26,0.15); /* faded crimson */
-  animation: scroll 190s linear infinite;
+  animation: scroll 170s linear infinite;
 }
 
 @keyframes scroll {
