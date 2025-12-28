@@ -2,24 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>ARS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>A.R.S. | Adaptive Radioprotective System</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <div class="cursor"></div>
 
 <!-- LOGO -->
 <div class="logo">
-  <div class="logo-text">ARS</div>
+  <svg class="shield" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#B81A1A">
+    <path d="M12 2L4 5v6c0 5 4 9 8 10s8-5 8-10V5l-8-3z"/>
+  </svg>
+  <span class="logo-text">A.R.S.</span>
 </div>
 
 <!-- SIDE NAV -->
 <nav class="side-nav">
-  <a href="#home" class="active">HOME</a>
-  <a href="#problem">PROBLEM</a>
+  <a href="#home" class="active">Home</a>
+  <a href="#problem">Problem</a>
+  <a href="#design">Design</a>
+  <a href="#tech">Tech</a>
+  <a href="#team">Team</a>
+  <a href="#references">References</a>
 </nav>
 
 <!-- HERO -->
@@ -32,7 +41,7 @@
 
     <div class="hero-right">
       <p class="tagline">
-        Designed for radiation. Built by humans.
+        Designed for radiation. Built for humans.
       </p>
 
       <div class="hero-buttons">
@@ -42,23 +51,30 @@
   </div>
 </section>
 
+<!-- REVOLVING TEXT -->
+<section class="revolving-text">
+  <div class="marquee">
+    <span>
+      ADAPTIVE PROTECTION • RADIATION MITIGATION • HUMAN SYSTEMS • MISSION-CRITICAL TECHNOLOGY •
+    </span>
+  </div>
+</section>
+
 <!-- PROBLEM PAGE -->
 <section id="problem">
 
   <!-- CORE PROBLEM -->
   <div class="core-problem">
-    <h2 class="fade-in-line">
-      Radiation defines the limits of human survival.
-    </h2>
+    <h2 class="fade-in">Radiation defines the limits of human survival.</h2>
 
-    <p class="fade-in-line">
+    <p class="fade-in">
       Ionizing radiation damages DNA, disrupts cellular function, and accumulates invisibly over time.
       Once exposure occurs, its biological consequences cannot be undone.
     </p>
 
-    <p class="fade-in-line">
-      In space, radiation limits how far and how long humans can travel. In medicine, it saves lives
-      while permanently damaging healthy tissue. Yet protection remains largely passive.
+    <p class="fade-in">
+      In space, radiation limits how far and how long humans can travel.
+      In medicine, it saves lives while permanently damaging healthy tissue.
     </p>
   </div>
 
@@ -77,7 +93,7 @@
       <h3>Radiation-Based Medicine</h3>
       <p>
         Over 17 million radiation therapy treatments are delivered globally each year.
-        While radiation destroys cancer cells, it also damages surrounding healthy tissue.
+        Radiation destroys cancer cells while damaging healthy tissue.
       </p>
     </div>
 
@@ -88,8 +104,12 @@
     </div>
 
   </div>
-
 </section>
+
+<section id="design" class="section"></section>
+<section id="tech" class="section"></section>
+<section id="team" class="section"></section>
+<section id="references" class="section"></section>
 
 <script src="script.js"></script>
 </body>
