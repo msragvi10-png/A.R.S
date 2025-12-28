@@ -17,6 +17,7 @@ body {
   background: var(--offwhite);
   color: var(--black);
   cursor: none;
+  overflow-x: hidden;
 }
 
 /* CURSOR */
@@ -33,16 +34,27 @@ body {
 
 /* LOGO */
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   position: fixed;
-  top: 24px;
-  left: 32px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 28px;
-  font-weight: 800;
+  top: 22px;
+  left: 30px;
   z-index: 1000;
 }
 
-/* SIDE NAV */
+.logo .shield {
+  width: 36px;
+  height: 36px;
+}
+
+.logo-text {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+/* NAV */
 .side-nav {
   position: fixed;
   right: 40px;
@@ -51,15 +63,17 @@ body {
   display: flex;
   flex-direction: column;
   gap: 22px;
+  z-index: 1000;
 }
 
 .side-nav a {
-  font-size: 14px;
   text-decoration: none;
+  font-size: 14px;
   color: var(--gray);
 }
 
-.side-nav a.active {
+.side-nav a.active,
+.side-nav a:hover {
   color: var(--crimson);
 }
 
@@ -69,21 +83,35 @@ body {
   padding: 120px 100px;
   display: flex;
   align-items: center;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 35% 45%, rgba(184,26,26,0.10), transparent 45%),
+    radial-gradient(circle at 65% 55%, rgba(184,26,26,0.08), transparent 50%),
+    radial-gradient(circle at 50% 30%, rgba(184,26,26,0.06), transparent 55%);
+  filter: blur(40px);
 }
 
 .hero-content {
+  position: relative;
   display: flex;
   gap: 120px;
 }
 
 .hero-left h1 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 130px;
   color: var(--crimson);
-  font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 .hero-left h2 {
   font-size: 26px;
+  margin-top: 12px;
 }
 
 .hero-right {
@@ -95,32 +123,54 @@ body {
   margin-bottom: 36px;
 }
 
+.hero-buttons {
+  display: flex;
+}
+
 .btn {
-  padding: 14px 28px;
+  padding: 14px 26px;
   border-radius: 40px;
+  text-decoration: none;
+}
+
+.btn.primary {
   background: var(--crimson);
   color: white;
-  text-decoration: none;
-  font-size: 14px;
+}
+
+/* REVOLVING TEXT */
+.revolving-text {
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.marquee span {
+  font-size: 96px;
+  font-weight: 800;
+  letter-spacing: 12px;
+  color: rgba(184,26,26,0.15);
+  animation: scroll 90s linear infinite;
+  white-space: nowrap;
+}
+
+@keyframes scroll {
+  from { transform: translateX(100%); }
+  to { transform: translateX(-100%); }
 }
 
 /* PROBLEM */
 #problem {
   padding: 160px 140px;
-  display: flex;
-  flex-direction: column;
-  gap: 140px;
 }
 
 /* CORE */
 .core-problem {
   max-width: 1100px;
-  margin: 0 auto;
+  margin: 0 auto 160px;
 }
 
 .core-problem h2 {
   font-size: 64px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
   color: var(--crimson);
   margin-bottom: 40px;
 }
@@ -128,11 +178,11 @@ body {
 .core-problem p {
   font-size: 20px;
   line-height: 1.7;
-  margin-bottom: 22px;
+  margin-bottom: 24px;
 }
 
-/* FADE BASE */
-.fade-in-line {
+/* FADE */
+.fade-in {
   opacity: 0;
   transform: translateY(40px);
 }
@@ -147,9 +197,17 @@ body {
 
 .world {
   padding: 120px 100px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+}
+
+.world h3 {
+  font-size: 36px;
+  margin-bottom: 28px;
+}
+
+.world p {
+  font-size: 18px;
+  line-height: 1.7;
+  max-width: 520px;
 }
 
 .world.left {
@@ -181,6 +239,11 @@ body {
   font-size: 26px;
   font-weight: 600;
   opacity: 0;
-  max-width: 700px;
   text-align: center;
+  max-width: 700px;
+}
+
+/* SECTIONS */
+.section {
+  min-height: 100vh;
 }
