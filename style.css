@@ -10,7 +10,6 @@
   --black: #0e0e0e;
   --offwhite: #f7f6f4;
   --gray: #777;
-  --light-gray: #ececec;
 }
 
 body {
@@ -44,10 +43,17 @@ body {
   z-index: 1000;
 }
 
+.logo .shield {
+  width: 36px;
+  height: 36px;
+  margin-bottom: 2px;
+}
+
 .logo-text {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 28px;
   font-weight: 800;
+  color: var(--black);
 }
 
 /* NAV */
@@ -59,6 +65,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 22px;
+  z-index: 1000;
 }
 
 .side-nav a {
@@ -74,11 +81,12 @@ body {
 
 /* HERO */
 .hero {
+  position: relative;
   min-height: 100vh;
   padding: 120px 100px;
   display: flex;
   align-items: center;
-  position: relative;
+  overflow: hidden;
 }
 
 /* AURA */
@@ -88,19 +96,21 @@ body {
   inset: 0;
   background:
     radial-gradient(circle at 35% 45%, rgba(184,26,26,0.10), transparent 45%),
-    radial-gradient(circle at 65% 55%, rgba(184,26,26,0.08), transparent 50%);
+    radial-gradient(circle at 65% 55%, rgba(184,26,26,0.08), transparent 50%),
+    radial-gradient(circle at 50% 30%, rgba(184,26,26,0.06), transparent 55%);
   filter: blur(40px);
   z-index: 0;
 }
 
 .hero-content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   display: flex;
   gap: 120px;
 }
 
 .hero-left h1 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 130px;
   font-weight: 800;
   color: var(--crimson);
@@ -131,6 +141,7 @@ body {
   border-radius: 40px;
   font-size: 14px;
   text-decoration: none;
+  transition: all 0.2s ease;
 }
 
 .btn.primary {
@@ -139,33 +150,35 @@ body {
 }
 
 .btn.secondary {
-  background: var(--light-gray);
+  background: transparent;          /* transparent background */
+  border: 2px solid var(--black);   /* black outline */
   color: var(--black);
+}
+
+.btn.secondary:hover {
+  background: var(--black);         /* fill black on hover */
+  color: white;
 }
 
 /* MARQUEE */
 .revolving-text {
   overflow: hidden;
   padding: 80px 0;
-}
-
-.marquee {
-  width: 100%;
-  white-space: nowrap;
+  background: var(--offwhite);
 }
 
 .marquee span {
   display: inline-block;
+  white-space: nowrap;
   font-size: 96px;
   font-weight: 800;
   letter-spacing: 12px;
   color: rgba(184,26,26,0.15);
-  padding-left: 100%;
-  animation: scroll 80s linear infinite;
+  animation: scroll 90s linear infinite;
 }
 
 @keyframes scroll {
-  from { transform: translateX(0); }
+  from { transform: translateX(100%); }
   to { transform: translateX(-100%); }
 }
 
