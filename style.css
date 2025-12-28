@@ -287,6 +287,7 @@ body {
   opacity: 0;
   max-width: 700px;
   text-align: center;
+  color: var(--crimson);
 }
 
 /* Fade-in when visible */
