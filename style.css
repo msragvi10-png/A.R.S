@@ -1,4 +1,6 @@
-/* RESET */
+/* ================================
+   RESET
+================================ */
 * {
   margin: 0;
   padding: 0;
@@ -20,7 +22,9 @@ body {
   overflow-x: hidden;
 }
 
-/* CURSOR */
+/* ================================
+   CUSTOM CURSOR
+================================ */
 .cursor {
   width: 12px;
   height: 12px;
@@ -32,7 +36,9 @@ body {
   transform: translate(-50%, -50%);
 }
 
-/* LOGO */
+/* ================================
+   LOGO
+================================ */
 .logo {
   display: flex;
   align-items: center;
@@ -43,20 +49,20 @@ body {
   z-index: 1000;
 }
 
-.logo .shield {
+.logo svg {
   width: 36px;
   height: 36px;
-  margin-bottom: 2px;
 }
 
 .logo-text {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 28px;
   font-weight: 800;
-  color: var(--black);
 }
 
-/* NAV */
+/* ================================
+   SIDE NAV
+================================ */
 .side-nav {
   position: fixed;
   right: 40px;
@@ -79,13 +85,15 @@ body {
   color: var(--crimson);
 }
 
-/* HERO */
+/* ================================
+   HERO
+================================ */
 .hero {
-  position: relative;
   min-height: 100vh;
   padding: 120px 100px;
   display: flex;
   align-items: center;
+  position: relative;
   overflow: hidden;
 }
 
@@ -151,12 +159,12 @@ body {
   color: var(--crimson);
 }
 
-/* BIG REVOLVING TEXT */
+/* ================================
+   REVOLVING TEXT
+================================ */
 .revolving-text {
-  overflow: hidden;
   padding: 80px 0;
-  background: var(--offwhite);
-  position: relative;
+  overflow: hidden;
 }
 
 .marquee span {
@@ -174,21 +182,21 @@ body {
   to { transform: translateX(-100%); }
 }
 
-/* SECTIONS */
-.section {
-  min-height: 100vh;
-}
-
-/* =========================
+/* ================================
    PROBLEM PAGE
-========================= */
-
-.problem-page {
-  padding: 120px 100px;
+================================ */
+#problem {
+  min-height: 100vh;
+  padding: 160px 140px;
   display: flex;
   flex-direction: column;
-  gap: 80px;
-  background: var(--offwhite);
+  gap: 140px;
+}
+
+/* Core problem */
+.core-problem {
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .core-problem h2 {
@@ -196,65 +204,77 @@ body {
   font-size: 64px;
   font-weight: 800;
   color: var(--crimson);
-  margin-bottom: 24px;
+  margin-bottom: 40px;
 }
 
 .core-problem p {
   font-size: 20px;
-  margin-bottom: 16px;
-  line-height: 1.6;
-  max-width: 900px;
+  line-height: 1.7;
+  margin-bottom: 22px;
 }
 
+/* Fade-in base */
 .fade-in-line {
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transform: translateY(40px);
 }
 
+/* Dual world */
 .dual-world {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 90vh;
   position: relative;
-  min-height: 80vh;
-  gap: 40px;
 }
 
 .world {
-  flex: 1;
-  padding: 60px 40px;
-  border-radius: 12px;
+  padding: 120px 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .world.left {
-  background: #111;
+  background: #0e0e0e;
   color: white;
 }
 
 .world.right {
-  background: #f7f6f4;
+  background: var(--offwhite);
   color: var(--black);
 }
 
-.divider-line {
-  width: 4px;
-  background: var(--crimson);
-  height: 0;
-  margin: 0 20px;
-  align-self: stretch;
-  transition: height 1.2s ease-out;
+.world h3 {
+  font-size: 36px;
+  margin-bottom: 24px;
 }
 
+.world p {
+  font-size: 18px;
+  line-height: 1.7;
+  max-width: 520px;
+}
+
+/* Divider */
+.divider-line {
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  width: 3px;
+  height: 0;
+  background: var(--crimson);
+  transform: translateX(-50%);
+}
+
+/* Center text */
 .center-text {
   position: absolute;
-  bottom: -50px;
+  bottom: 80px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 600;
   opacity: 0;
-  transition: opacity 1s ease-out;
+  max-width: 700px;
   text-align: center;
-  max-width: 600px;
 }
