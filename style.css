@@ -265,6 +265,12 @@ body {
   max-width: 520px;
 }
 
+/* Radiation-Based Medicine panel border */
+.world.right {
+  border: 1.5px solid #000;
+  box-sizing: border-box;
+}
+
 /* Divider */
 .divider-line {
   position: absolute;
