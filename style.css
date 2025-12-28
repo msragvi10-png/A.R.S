@@ -150,13 +150,13 @@ body {
 }
 
 .btn.secondary {
-  background: transparent;          /* transparent background */
-  border: 2px solid var(--black);   /* black outline */
+  background: transparent;
+  border: 2px solid var(--black);
   color: var(--black);
 }
 
 .btn.secondary:hover {
-  background: var(--black);         /* fill black on hover */
+  background: var(--black);
   color: white;
 }
 
@@ -197,7 +197,6 @@ body {
   gap: 80px;
 }
 
-/* Header & intro */
 .solution-header h2 {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 64px;
@@ -212,7 +211,6 @@ body {
   max-width: 900px;
 }
 
-/* Cards container */
 .solution-cards {
   display: flex;
   gap: 40px;
@@ -220,7 +218,6 @@ body {
   justify-content: space-between;
 }
 
-/* Individual card */
 .solution-card {
   background: white;
   padding: 40px 30px;
@@ -232,33 +229,40 @@ body {
   cursor: default;
 }
 
-/* Card hover effect */
+/* ✅ FIXED HOVER — ONLY CHANGE */
 .solution-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-10px) !important;
   box-shadow: 0 20px 35px rgba(184,26,26,0.25);
 }
 
-/* Card header */
 .solution-card h3 {
   font-size: 24px;
   margin-bottom: 12px;
   color: var(--crimson);
 }
 
-/* Card paragraph */
 .solution-card p {
   font-size: 16px;
   line-height: 1.6;
 }
 
-/* Fade-in effect for cards & header */
-.fade-in {
-  opacity: 1 !important;
-  transform: translateY(0) !important;
+/* ================================
+   FADE-IN ANIMATION
+================================= */
+.fade-in-line {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
 }
 
+.fade-in-line.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-/* PROBLEM PAGE */
+/* ================================
+   PROBLEM PAGE
+================================= */
 #problem {
   min-height: 100vh;
   padding: 160px 140px;
@@ -267,7 +271,6 @@ body {
   gap: 140px;
 }
 
-/* Core problem */
 .core-problem {
   max-width: 1100px;
   margin: 0 auto;
@@ -287,18 +290,6 @@ body {
   margin-bottom: 22px;
 }
 
-/* Fade-in base */
-.fade-in-line {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s ease-out;
-}
-
-.fade-in-line.fade-in {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 /* Dual world */
 .dual-world {
   display: grid;
@@ -316,18 +307,12 @@ body {
 }
 
 .world.left {
-  background: #0e0e0e;
-  color: white;
-}
-
-/* Space Exploration background */
-.world.left {
-  position: relative;
   background-color: #000;
+  color: white;
+  position: relative;
   overflow: hidden;
 }
 
-/* Stars */
 .world.left::before {
   content: "";
   position: absolute;
@@ -353,6 +338,7 @@ body {
 .world.right {
   background: var(--offwhite);
   color: var(--black);
+  border: 1.5px solid #000;
 }
 
 .world h3 {
@@ -366,13 +352,6 @@ body {
   max-width: 520px;
 }
 
-/* Radiation-Based Medicine panel border */
-.world.right {
-  border: 1.5px solid #000;
-  box-sizing: border-box;
-}
-
-/* Divider */
 .divider-line {
   position: absolute;
   left: 50%;
@@ -383,7 +362,6 @@ body {
   transform: translateX(-50%);
 }
 
-/* Center text */
 .center-text {
   position: absolute;
   bottom: 80px;
@@ -391,14 +369,7 @@ body {
   transform: translateX(-50%);
   font-size: 26px;
   font-weight: 600;
-  opacity: 0;
   max-width: 700px;
   text-align: center;
   color: var(--crimson);
-}
-
-/* Fade-in when visible */
-.fade-in {
-  opacity: 1;
-  transform: translateY(0);
 }
