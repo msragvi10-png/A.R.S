@@ -1,30 +1,59 @@
+/* ================================
+   CURSOR
+================================ */
 const cursor = document.querySelector('.cursor');
 
-document.addEventListener('mousemove', e => {
-  cursor.style.left = `${e.clientX}px`;
-  cursor.style.top = `${e.clientY}px`;
-});
+if (cursor) {
+  document.addEventListener('mousemove', (e) => {
+    cursor.style.left = `${e.clientX}px`;
+    cursor.style.top = `${e.clientY}px`;
+  });
+}
 
-/* ACTIVE NAV */
+/* ================================
+   ACTIVE NAV
+================================ */
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('.side-nav a');
 
-window.addEventListener('scroll', () => {
-  let current = '';
+if (sections.length && navLinks.length) {
+  window.addEventListener('scroll', () => {
+    let current = '';
 
-  sections.forEach(section => {
-    const top = section.offsetTop - 200;
-    const height = section.offsetHeight;
+    sections.forEach(section => {
+      const top = section.offsetTop - 200;
+      const height = section.offsetHeight;
 
-    if (pageYOffset >= top && pageYOffset < top + height) {
-      current = section.getAttribute('id');
+      if (window.pageYOffset >= top && window.pageYOffset < top + height) {
+        current = section.getAttribute('id');
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === `#${current}`) {
+        link.classList.add('active');
+      }
+    });
+  });
+}
+
+/* ================================
+   PROBLEM PAGE — FADE IN
+================================ */
+const fadeElements = document.querySelectorAll('.fade-in-line');
+
+const fadeInOnScroll = () => {
+  const triggerBottom = window.innerHeight * 0.85;
+
+  fadeElements.forEach(el => {
+    const elTop = el.getBoundingClientRect().top;
+
+    if (elTop < triggerBottom) {
+      el.classList.add('fade-in');
     }
   });
+};
 
-  navLinks.forEach(link => {
-    link.classList.remove('active');
-    if (link.getAttribute('href') === `#${current}`) {
-      link.classList.add('active');
-    }
-  });
-});
+window.addEventListener('scroll', fadeInOnScroll);
+window.addEventListener('load', fadeInOnScroll);
