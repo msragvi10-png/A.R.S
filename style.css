@@ -447,7 +447,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 48px;
+  gap: 22px;
   position: relative;
   z-index: 2;
 }
@@ -488,6 +488,10 @@ body {
   max-width: 90vw;
   display: block;
   filter: drop-shadow(0 25px 40px rgba(0,0,0,0.18));
+}
+
+.layer {
+  padding-left: 20px;
 }
 
 /* ACTIVE (SCROLL) */
