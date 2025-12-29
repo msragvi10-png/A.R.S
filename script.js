@@ -64,8 +64,14 @@ const layerObserver = new IntersectionObserver(
   entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        layers.forEach(l => l.classList.remove('active'));
-        entry.target.classList.add('active');
+     layers.forEach(l => {
+  l.classList.remove('active');
+  l.classList.add('inactive');
+});
+
+entry.target.classList.add('active');
+entry.target.classList.remove('inactive');
+
       }
     });
   },
