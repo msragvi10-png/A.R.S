@@ -147,6 +147,7 @@
 
 <section id="technology" class="section technology">
 
+  <!-- HEADER -->
   <div class="tech-header">
     <h2>
       <span>Six Functional Layers.</span>
@@ -154,129 +155,73 @@
     </h2>
   </div>
 
-  <div class="layers-stage">
+  <!-- SYSTEM STAGE -->
+  <div class="tech-stage">
 
-    <div class="layer layer-1" data-layer="1">
-      <img src="images/layer-1-outer.png" alt="Outer Structural Layer">
-      <div class="layer-info">
-        <h3>Outer Structural Layer</h3>
-        <p>
-          Provides mechanical durability and environmental protection. Designed to withstand aerospace and clinical environments while housing all internal components.
-        </p>
-      </div>
-    </div>
+    <!-- ENERGY FLOW -->
+    <div class="energy-flow"></div>
 
-    <div class="layer layer-2" data-layer="2">
-      <img src="images/layer-2-hydrogen.png" alt="Hydrogen-Rich Layer">
-      <div class="layer-info">
-        <h3>Hydrogen-Rich (H) Layer</h3>
-        <p>
-          Reduces secondary particle generation, a major contributor to biological damage from high-energy radiation, particularly in space environments.
-        </p>
-      </div>
-    </div>
+    <!-- LAYER STACK -->
+    <div class="layer-stack">
 
-    <div class="layer layer-3" data-layer="3">
-      <img src="images/layer-3-absorber.png" alt="Absorber Layer">
-      <div class="layer-info">
-        <h3>Absorber Layer</h3>
-        <p>
-          Attenuates penetrating radiation, including neutron interactions that conventional shielding struggles to address.
-        </p>
-      </div>
-    </div>
-
-    <div class="layer layer-4" data-layer="4">
-      <img src="images/layer-4-sensor.png" alt="Sensor Layer">
-      <div class="layer-info">
-        <h3>Sensor Layer</h3>
-        <p>
-          Embedded radiation sensors continuously monitor exposure and cumulative dose, feeding real-time data into the system’s adaptive logic.
-        </p>
-      </div>
-    </div>
-
-    <div class="layer layer-5" data-layer="5">
-      <img src="images/layer-5-bio.png" alt="Biological Mitigation Layer">
-      <div class="layer-info">
-        <h3>Biological Mitigation Layer</h3>
-        <p>
-          Operates downstream of exposure to reduce oxidative stress and DNA damage using biologically informed, non-experimental strategies.
-        </p>
-      </div>
-    </div>
-
-    <div class="layer layer-6" data-layer="6">
-      <img src="images/layer-6-comfort.png" alt="Inner Comfort Layer">
-      <div class="layer-info">
-        <h3>Inner Comfort Layer</h3>
-        <p>
-          Ensures wearability, thermal regulation, and long-term comfort for extended use in both aerospace and medical settings.
-        </p>
-      </div>
-    </div>
-
-  </div>
-</section>
-    
-  <div class="technology-header">
-    <h2>Six Functional Layers. One Integrated System.</h2>
-  </div>
-
-  <div class="tech-container">
-
-    <!-- ENERGY FLOW LINE -->
-    <div class="energy-line"></div>
-
-    <!-- LAYERS -->
-    <div class="layers-stack">
-
-      <div class="tech-layer" data-layer="1">
-        <span class="layer-label">Outer Structural Layer</span>
-        <p class="layer-desc">
-          Provides mechanical durability and environmental protection. Designed to withstand aerospace and clinical environments while housing all internal components.
-        </p>
+      <!-- 1: OUTER STRUCTURAL -->
+      <div class="layer" data-layer="1">
+        <img src="images/layer-1-outer.png" alt="Outer Structural Layer">
+        <div class="layer-text">
+          <h3>Outer Structural Layer</h3>
+          <p>Mechanical durability and environmental protection forming the system’s outer shell.</p>
+        </div>
       </div>
 
-      <div class="tech-layer" data-layer="2">
-        <span class="layer-label">Hydrogen-Rich (H) Layer</span>
-        <p class="layer-desc">
-          Reduces secondary particle generation, a major contributor to biological damage from high-energy radiation, particularly in space environments.
-        </p>
+      <!-- 2: HYDROGEN-RICH -->
+      <div class="layer" data-layer="2">
+        <img src="images/layer-2-hydrogen.png" alt="Hydrogen-Rich Layer">
+        <div class="layer-text">
+          <h3>Hydrogen-Rich (H) Layer</h3>
+          <p>Hydrogen-dense material moderates high-energy radiation through elastic collisions.</p>
+        </div>
       </div>
 
-      <div class="tech-layer" data-layer="3">
-        <span class="layer-label">Absorber Layer</span>
-        <p class="layer-desc">
-          Attenuates penetrating radiation, including neutron interactions that conventional shielding struggles to address.
-        </p>
+      <!-- 3: ABSORBER -->
+      <div class="layer" data-layer="3">
+        <img src="images/layer-3-absorber.png" alt="Absorber Layer">
+        <div class="layer-text">
+          <h3>Absorber Layer</h3>
+          <p>Attenuates remaining radiation energy using high cross-section materials.</p>
+        </div>
       </div>
 
-      <div class="tech-layer" data-layer="4">
-        <span class="layer-label">Sensor Layer</span>
-        <p class="layer-desc">
-          Embedded radiation sensors continuously monitor exposure and cumulative dose, feeding real-time data into the system’s adaptive logic.
-        </p>
+      <!-- 4: SENSOR -->
+      <div class="layer" data-layer="4">
+        <img src="images/layer-4-sensor.png" alt="Sensor Layer">
+        <div class="layer-text">
+          <h3>Sensor Layer</h3>
+          <p>Embedded dosimetry continuously measures radiation type, energy, and dose.</p>
+        </div>
       </div>
 
-      <div class="tech-layer" data-layer="5">
-        <span class="layer-label">Biological Mitigation Layer</span>
-        <p class="layer-desc">
-          Operates downstream of exposure to reduce oxidative stress and DNA damage using biologically informed, non-experimental strategies.
-        </p>
+      <!-- 5: BIOLOGICAL -->
+      <div class="layer" data-layer="5">
+        <img src="images/layer-5-bio.png" alt="Biological Mitigation Layer">
+        <div class="layer-text">
+          <h3>Biological Mitigation Layer</h3>
+          <p>Reduces oxidative stress and DNA damage downstream of radiation exposure.</p>
+        </div>
       </div>
 
-      <div class="tech-layer" data-layer="6">
-        <span class="layer-label">Inner Comfort Layer</span>
-        <p class="layer-desc">
-          Ensures wearability, thermal regulation, and long-term comfort for extended use in both aerospace and medical settings.
-        </p>
+      <!-- 6: COMFORT -->
+      <div class="layer" data-layer="6">
+        <img src="images/layer-6-comfort.png" alt="Inner Comfort Layer">
+        <div class="layer-text">
+          <h3>Inner Comfort Layer</h3>
+          <p>Skin-facing interface ensuring long-term comfort and wearability.</p>
+        </div>
       </div>
 
     </div>
   </div>
 </section>
-
+  
   <section id="validation" class="section"></section>
   <section id="impact" class="section"></section>
   <section id="team" class="section"></section>
