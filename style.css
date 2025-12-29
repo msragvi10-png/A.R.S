@@ -373,3 +373,117 @@ body {
   text-align: center;
   color: var(--crimson);
 }
+
+/* ================================
+   TECHNOLOGY PAGE
+================================ */
+
+.technology {
+  padding: 160px 140px;
+  position: relative;
+  overflow: hidden;
+}
+
+.technology-header h2 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 64px;
+  font-weight: 800;
+  color: var(--crimson);
+  margin-bottom: 120px;
+}
+
+/* CONTAINER */
+.tech-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+/* ENERGY FLOW */
+.energy-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(184,26,26,0.4),
+    transparent
+  );
+  animation: energyFlow 4s linear infinite;
+  z-index: 1;
+}
+
+@keyframes energyFlow {
+  from { background-position: 0 -200px; }
+  to   { background-position: 0 800px; }
+}
+
+/* STACK */
+.layers-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  position: relative;
+  z-index: 2;
+  perspective: 1200px;
+}
+
+/* INDIVIDUAL LAYER */
+.tech-layer {
+  width: 520px;
+  padding: 28px 36px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  transition: 
+    transform 0.5s ease,
+    opacity 0.4s ease,
+    box-shadow 0.5s ease;
+  transform-origin: center;
+  cursor: pointer;
+  opacity: 0.25;
+}
+
+/* ACTIVE ON SCROLL */
+.tech-layer.active {
+  opacity: 1;
+  box-shadow: 0 20px 45px rgba(184,26,26,0.35);
+}
+
+/* LABEL */
+.layer-label {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--crimson);
+}
+
+/* DESCRIPTION */
+.layer-desc {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-top: 14px;
+  opacity: 0;
+  max-height: 0;
+  transition: all 0.4s ease;
+}
+
+/* HOVER FOCUS */
+.tech-layer:hover {
+  transform: scale(1.35) translateZ(80px);
+  z-index: 10;
+  opacity: 1;
+}
+
+.tech-layer:hover .layer-desc {
+  opacity: 1;
+  max-height: 200px;
+}
+
+/* DIM OTHERS */
+.layers-stack:hover .tech-layer:not(:hover) {
+  transform: scale(0.82);
+  opacity: 0.15;
+}
+
