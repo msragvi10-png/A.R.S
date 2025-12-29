@@ -436,7 +436,7 @@ body {
 ================================ */
 
 #technology {
-  background: #0b0b0d;
+  background: var(--offwhite);
   padding: 180px 0;
   position: relative;
   overflow: hidden;
@@ -486,6 +486,7 @@ body {
   width: 520px;
   max-width: 90vw;
   display: block;
+  filter: drop-shadow(0 25px 40px rgba(0,0,0,0.18));
 }
 
 /* ACTIVE (SCROLL) */
