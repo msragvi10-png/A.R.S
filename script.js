@@ -54,28 +54,16 @@ const fadeInOnScroll = () => {
 window.addEventListener('scroll', fadeInOnScroll);
 window.addEventListener('load', fadeInOnScroll);
 
-/* ================================
-   TECHNOLOGY IMAGE SCROLL LOGIC
-================================ */
-
 const layers = document.querySelectorAll('.layer');
 
-const layerObserver = new IntersectionObserver(
-  entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-     layers.forEach(l => {
-  l.classList.remove('active');
-  l.classList.add('inactive');
-});
-
-entry.target.classList.add('active');
-entry.target.classList.remove('inactive');
-
-      }
+layers.forEach(layer => {
+  layer.addEventListener('mouseenter', () => {
+    layers.forEach(l => {
+      l.classList.remove('active');
+      l.classList.add('inactive');
     });
-  },
-  { threshold: 0.6 }
-);
 
-layers.forEach(layer => layerObserver.observe(layer));
+    layer.classList.add('active');
+    layer.classList.remove('inactive');
+  });
+});
