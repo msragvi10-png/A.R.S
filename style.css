@@ -480,3 +480,83 @@ body {
   opacity: 1;
 }
 
+/* ================================
+   VALIDATION PAGE
+================================ */
+
+.validation {
+  padding: 180px 140px;
+  display: flex;
+  flex-direction: column;
+  gap: 140px;
+}
+
+/* HEADER */
+.validation-header h2 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 64px;
+  font-weight: 800;
+  color: var(--crimson);
+  margin-bottom: 16px;
+}
+
+.validation-subtitle {
+  font-size: 20px;
+  color: var(--black);
+}
+
+/* BLOCKS */
+.validation-block {
+  max-width: 1000px;
+}
+
+.validation-block h3 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: var(--crimson);
+}
+
+.validation-block p {
+  font-size: 20px;
+  line-height: 1.7;
+  color: var(--black);
+}
+
+/* DIAGRAM PLACEHOLDER */
+.validation-diagram {
+  margin-top: 40px;
+  padding: 60px;
+  border: 2px dashed rgba(0,0,0,0.25);
+  text-align: center;
+  font-size: 16px;
+  color: var(--gray);
+}
+
+/* PROTOTYPE GRID */
+.prototype-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.prototype-grid figure {
+  text-align: center;
+}
+
+.prototype-grid img {
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.15);
+  transition: transform 0.6s ease;
+}
+
+.prototype-grid img:hover {
+  transform: translateY(-8px);
+}
+
+.prototype-grid figcaption {
+  margin-top: 14px;
+  font-size: 14px;
+  color: var(--gray);
+}
