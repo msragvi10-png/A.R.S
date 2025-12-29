@@ -410,28 +410,6 @@ body {
   margin-left: 8vw;
 }
 
-/* ENERGY FLOW */
-.tech-stack::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 3px;
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    rgba(184,26,26,0.35),
-    transparent
-  );
-  animation: energyPulse 4s linear infinite;
-  z-index: 1;
-}
-
-@keyframes energyPulse {
-  from { background-position: 0 -200px; }
-  to   { background-position: 0 800px; }
-}
-
 /* LAYER */
 .layer {
   position: relative;
