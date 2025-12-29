@@ -55,15 +55,16 @@ window.addEventListener('scroll', fadeInOnScroll);
 window.addEventListener('load', fadeInOnScroll);
 
 /* ================================
-   TECHNOLOGY LAYER SCROLL LOGIC
+   TECHNOLOGY IMAGE SCROLL LOGIC
 ================================ */
 
-const techLayers = document.querySelectorAll('.tech-layer');
+const layers = document.querySelectorAll('.layer');
 
-const techObserver = new IntersectionObserver(
+const layerObserver = new IntersectionObserver(
   entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
+        layers.forEach(l => l.classList.remove('active'));
         entry.target.classList.add('active');
       }
     });
@@ -71,5 +72,4 @@ const techObserver = new IntersectionObserver(
   { threshold: 0.6 }
 );
 
-techLayers.forEach(layer => techObserver.observe(layer));
-
+layers.forEach(layer => layerObserver.observe(layer));
