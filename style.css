@@ -487,3 +487,119 @@ body {
   opacity: 0.15;
 }
 
+/* ================================
+   TECHNOLOGY — IMAGE SYSTEM
+================================ */
+
+.tech-header {
+  margin-bottom: 140px;
+}
+
+.tech-header h2 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 64px;
+  font-weight: 800;
+  color: var(--crimson);
+  line-height: 1.1;
+}
+
+.tech-header span {
+  display: block;
+}
+
+/* STAGE */
+.tech-stage {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+/* ENERGY FLOW */
+.energy-flow {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(184,26,26,0.35),
+    transparent
+  );
+  animation: energyPulse 4s linear infinite;
+  z-index: 1;
+}
+
+@keyframes energyPulse {
+  from { background-position: 0 -200px; }
+  to { background-position: 0 800px; }
+}
+
+/* STACK */
+.layer-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  position: relative;
+  z-index: 2;
+  perspective: 1400px;
+}
+
+/* LAYER */
+.layer {
+  position: relative;
+  transition: transform 0.6s ease, opacity 0.4s ease;
+  transform-origin: center;
+  opacity: 0.25;
+  cursor: pointer;
+}
+
+.layer img {
+  width: 620px;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+/* ACTIVE (SCROLL) */
+.layer.active {
+  opacity: 1;
+  transform: scale(1.18);
+  z-index: 5;
+}
+
+/* TEXT */
+.layer-text {
+  margin-top: 18px;
+  max-width: 520px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.layer-text h3 {
+  color: var(--crimson);
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.layer-text p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* SHOW TEXT */
+.layer.active .layer-text,
+.layer:hover .layer-text {
+  opacity: 1;
+}
+
+/* HOVER ISOLATION */
+.layer:hover {
+  transform: scale(1.28) translateZ(90px);
+  z-index: 10;
+  opacity: 1;
+}
+
+.layer-stack:hover .layer:not(:hover) {
+  transform: scale(0.82);
+  opacity: 0.15;
+}
