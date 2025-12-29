@@ -446,10 +446,11 @@ body {
 .tech-stack {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 22px;
   position: relative;
   z-index: 2;
+  margin-left: 8vw;
 }
 
 /* ENERGY FLOW */
@@ -503,8 +504,8 @@ body {
 
 /* INACTIVE */
 .layer.inactive {
-  transform: scale(0.7);
-  opacity: 0.15;
+  transform: scale(0.95);
+  opacity: 0.75;
 }
 
 /* HOVER (INSPECTION MODE) */
@@ -517,12 +518,13 @@ body {
 /* TEXT */
 .layer-text {
   position: absolute;
-  bottom: -90px;
-  width: 100%;
-  text-align: center;
+  left: calc(100% + 40px);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 320px;
   opacity: 0;
-  transition: opacity 0.4s ease;
-  color: white;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  color: #000000;
 }
 
 .layer-text h3 {
@@ -534,6 +536,7 @@ body {
 .layer-text p {
   font-size: 15px;
   line-height: 1.6;
+  color: #000000;
 }
 
 /* SHOW TEXT */
