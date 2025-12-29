@@ -380,8 +380,8 @@ body {
 
 .tech-header {
   max-width: 1200px;
-  margin: 0 auto 120px auto;
-  padding: 0 140px;
+  margin: 0 0 120px 0;
+  padding-left: 140px;
 }
 
 .tech-header h2 {
