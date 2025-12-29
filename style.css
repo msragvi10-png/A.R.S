@@ -418,12 +418,13 @@ body {
 
 .layer-text {
   position: absolute;
-  bottom: -80px;
-  text-align: center;
+  left: calc(100% + 40px);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 320px;
   opacity: 0;
-  transition: opacity 0.4s ease;
-  color: white;
-  width: 100%;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  color: var(--black);
 }
 
 .layer.active .layer-text,
