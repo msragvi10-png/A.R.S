@@ -53,3 +53,23 @@ const fadeInOnScroll = () => {
 
 window.addEventListener('scroll', fadeInOnScroll);
 window.addEventListener('load', fadeInOnScroll);
+
+/* ================================
+   TECHNOLOGY LAYER SCROLL LOGIC
+================================ */
+
+const techLayers = document.querySelectorAll('.tech-layer');
+
+const techObserver = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  },
+  { threshold: 0.6 }
+);
+
+techLayers.forEach(layer => techObserver.observe(layer));
+
