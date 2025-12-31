@@ -562,3 +562,12 @@ body {
   font-size: 14px;
   color: var(--gray);
 }
+
+.validation img {
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+.validation img:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 50px rgba(184,26,26,0.18);
+}
