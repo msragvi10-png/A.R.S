@@ -662,3 +662,77 @@ body {
   transform: translateY(-6px);
   box-shadow: 0 22px 50px rgba(184,26,26,0.18);
 }
+
+/* ================================
+   IMPACT PAGE
+================================ */
+
+.impact {
+  padding: 180px 140px;
+  display: flex;
+  flex-direction: column;
+  gap: 140px;
+  background: var(--offwhite);
+}
+
+/* HEADER */
+.impact-header h2 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 64px;
+  font-weight: 800;
+  color: var(--crimson);
+  margin-bottom: 16px;
+}
+
+.impact-subtitle {
+  font-size: 20px;
+  line-height: 1.7;
+  max-width: 900px;
+  color: var(--black);
+}
+
+/* BLOCKS */
+.impact-block {
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.impact-block h3 {
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--crimson);
+}
+
+.impact-block p {
+  font-size: 20px;
+  line-height: 1.7;
+  color: var(--black);
+}
+
+/* OUTCOMES */
+.impact-outcomes {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 10px;
+  padding-left: 0;
+}
+
+.impact-outcomes li {
+  font-size: 18px;
+  padding-left: 22px;
+  position: relative;
+  color: var(--black);
+}
+
+.impact-outcomes li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--crimson);
+  font-weight: 600;
+}
+
