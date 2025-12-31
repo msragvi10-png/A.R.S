@@ -522,6 +522,19 @@ body {
   color: var(--black);
 }
 
+/* CONSISTENT INTERNAL SPACING */
+.validation-block {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+/* Extra breathing room before visuals */
+.validation-block .prototype-grid,
+.validation-block .validation-diagram {
+  margin-top: 40px;
+}
+
 /* DIAGRAM PLACEHOLDER */
 .validation-diagram {
   margin-top: 50px;
