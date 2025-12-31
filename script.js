@@ -67,3 +67,17 @@ layers.forEach(layer => {
     layer.classList.remove('inactive');
   });
 });
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("fade-in");
+      }
+    });
+  },
+  { threshold: 0.15 }
+);
+
+document.querySelectorAll(".fade-in-line").forEach(el => {
+  observer.observe(el);
+});
