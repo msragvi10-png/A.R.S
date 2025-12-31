@@ -674,21 +674,23 @@ body {
 }
 
 .impact-header {
-  text-align: center;
+  text-align: left;
   margin-bottom: 90px;
 }
 
 .impact-header h2 {
-  font-size: 36px;
-  font-weight: 700;
-  margin-bottom: 16px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 64px;
+  font-weight: 800;
+  color: var(--crimson);
+  margin-bottom: 20px;
 }
 
 .impact-subtitle {
   font-size: 18px;
   color: var(--gray);
-  max-width: 600px;
-  margin: 0 auto;
+  max-width: 720px;
+  margin: 0;
 }
 
 .impact-section {
@@ -696,9 +698,10 @@ body {
 }
 
 .impact-section h3 {
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 8px;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--crimson);
+  margin-bottom: 6px;
 }
 
 .impact-section h4 {
@@ -770,3 +773,18 @@ body {
   font-weight: 600;
 }
 
+/* ================================
+   IMPACT PAGE — ALIGNMENT FIX
+================================ */
+
+#impact {
+  text-align: left;
+}
+
+#impact p,
+#impact h3,
+#impact h4,
+#impact ul,
+#impact li {
+  text-align: left;
+}
