@@ -730,7 +730,7 @@ body {
   content: "—";
   position: absolute;
   left: 0;
-  color: var(--accent);
+  color: var(--crimson);
 }
 
 /* Subtle fade-in */
