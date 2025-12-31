@@ -667,48 +667,82 @@ body {
    IMPACT PAGE
 ================================ */
 
-.impact {
-  padding: 180px 140px;
-  display: flex;
-  flex-direction: column;
-  gap: 140px;
-  background: var(--offwhite);
+.impact-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 120px 24px;
 }
 
-/* HEADER */
+.impact-header {
+  text-align: center;
+  margin-bottom: 90px;
+}
+
 .impact-header h2 {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 64px;
-  font-weight: 800;
-  color: var(--crimson);
+  font-size: 36px;
+  font-weight: 700;
   margin-bottom: 16px;
 }
 
 .impact-subtitle {
-  font-size: 20px;
-  line-height: 1.7;
-  max-width: 900px;
-  color: var(--black);
+  font-size: 18px;
+  color: var(--gray);
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-/* BLOCKS */
-.impact-block {
-  max-width: 1000px;
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
+.impact-section {
+  margin-bottom: 90px;
 }
 
-.impact-block h3 {
-  font-size: 36px;
+.impact-section h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.impact-section h4 {
+  font-size: 16px;
   font-weight: 600;
-  color: var(--crimson);
+  color: var(--gray);
+  margin-bottom: 20px;
 }
 
-.impact-block p {
-  font-size: 20px;
+.impact-section p {
+  font-size: 16px;
   line-height: 1.7;
-  color: var(--black);
+  margin-bottom: 24px;
+}
+
+.impact-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.impact-section li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+
+.impact-section li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+/* Subtle fade-in */
+.fade-in {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* OUTCOMES */
