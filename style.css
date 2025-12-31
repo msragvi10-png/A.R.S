@@ -563,13 +563,20 @@ body {
   flex-direction: column;
   gap: 14px;
 }
+.prototype-grid figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
 
 /* Caption ABOVE image */
-.prototype-grid .figure-title {
-  font-size: 15px;
+.figure-title {
+  font-size: 16px;
   font-weight: 600;
-  color: var(--crimson);
-  letter-spacing: 0.3px;
+  color: var(--black);
+  margin-bottom: 14px;
+  letter-spacing: 0.2px;
 }
 
 /* Force equal image size */
@@ -583,11 +590,35 @@ body {
 }
 
 /* Description BELOW image */
+.prototype-grid figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.figure-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: 14px;
+}
+
+.prototype-grid figure img {
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.15);
+  margin-bottom: 14px;
+}
+
 .prototype-grid figcaption {
   font-size: 14px;
   line-height: 1.6;
   color: var(--gray);
-}
+  max-width: 320px;
+}  
 
 .validation img {
   transition: transform 0.6s ease, box-shadow 0.6s ease;
