@@ -54,6 +54,9 @@ const fadeInOnScroll = () => {
 window.addEventListener('scroll', fadeInOnScroll);
 window.addEventListener('load', fadeInOnScroll);
 
+/* ================================
+   LAYER INTERACTION
+================================ */
 const layers = document.querySelectorAll('.layer');
 
 layers.forEach(layer => {
@@ -67,18 +70,21 @@ layers.forEach(layer => {
     layer.classList.remove('inactive');
   });
 });
-<script>
-  const observer = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-        }
-      });
-    },
-    { threshold: 0.15 }
-  );
 
-  document.querySelectorAll(".fade-in").forEach(section => {
-    observer.observe(section);
-  });
+/* ================================
+   IMPACT PAGE FADE-IN
+================================ */
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  },
+  { threshold: 0.15 }
+);
+
+document.querySelectorAll(".fade-in").forEach(el => {
+  observer.observe(el);
+});
