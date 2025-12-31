@@ -571,8 +571,23 @@ body {
 }
 
 .prototype-grid figcaption {
-  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 18px;
   font-size: 14px;
+  color: var(--gray);
+}
+
+.prototype-grid figcaption strong {
+  font-size: 15px;
+  color: var(--black);
+  font-weight: 600;
+}
+
+.prototype-grid figcaption span {
+  font-size: 14px;
+  line-height: 1.5;
   color: var(--gray);
 }
 
