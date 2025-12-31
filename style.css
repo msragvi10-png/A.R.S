@@ -548,6 +548,11 @@ body {
   display: block;
 }
 
+.validation-diagram img {
+  border: 1.5px solid #000;
+  border-radius: 10px;
+}
+
 /* ==============================
    VALIDATION — PROTOTYPE GRID
 ============================== */
