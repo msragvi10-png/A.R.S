@@ -554,21 +554,19 @@ body {
 
 .prototype-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 80px;
-  margin-top: 80px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 70px 60px;
+  margin-top: 60px;
+  align-items: start;
 }
 
-.prototype-grid figure {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
+/* Base figure styling */
 .prototype-grid figure {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  gap: 14px;
 }
 
 /* Caption ABOVE image */
@@ -576,71 +574,45 @@ body {
   font-size: 16px;
   font-weight: 600;
   color: var(--black);
-  margin-bottom: 14px;
   letter-spacing: 0.2px;
 }
 
-/* Force equal image size */
-.prototype-grid img {
-  width: 100%;
-  height: 260px;
-  object-fit: contain;
-  background: white;
-  border-radius: 14px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.10);
-}
-
-/* Description BELOW image */
-.prototype-grid figure {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.figure-title {
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--black);
-  margin-bottom: 14px;
-}
-
+/* Default images */
 .prototype-grid figure img {
   width: 100%;
   max-width: 360px;
   height: auto;
   border-radius: 14px;
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.15);
-  margin-bottom: 14px;
 }
 
+/* Description BELOW image */
 .prototype-grid figcaption {
   font-size: 14px;
   line-height: 1.6;
   color: var(--gray);
   max-width: 320px;
-}  
-
-/* Make ONLY the system reconfiguration figure wider */
-.prototype-grid figure:nth-child(3) {
-  grid-column: span 2;
 }
 
-.reconfig-pair {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-  margin-bottom: 12px;
+/* SYSTEM RECONFIGURATION — bottom left & larger */
+.prototype-grid .wide-figure {
+  grid-column: 1 / 2;
 }
 
-.reconfig-pair img {
-  width: 100%;
-  height: auto;
-  border-radius: 14px;
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.15);
+.prototype-grid .wide-figure img {
+  max-width: 720px;
 }
 
+/* 3D PRINTED MODULE — bottom right */
+.prototype-grid figure:last-child {
+  grid-column: 2 / 3;
+}
+
+/* Placeholder styling */
 .reconfig-placeholder {
+  width: 100%;
+  max-width: 360px;
+  min-height: 260px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -648,9 +620,9 @@ body {
   border-radius: 14px;
   font-size: 14px;
   color: var(--gray);
-  min-height: 260px;
 }
 
+/* Hover polish */
 .validation img {
   transition: transform 0.6s ease, box-shadow 0.6s ease;
 }
