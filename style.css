@@ -799,7 +799,7 @@ body {
 
 .impact-graph img {
   width: 100%;
-  max-width: 250px;   /* ⬅ about 1/4 screen width */
+  max-width: 300px;   /* ⬅ about 1/4 screen width */
   display: block;
   margin-left: 0;     /* align with text, not centered */
   border: 1.5px solid #000;
@@ -812,7 +812,7 @@ body {
   font-size: 13px;
   line-height: 1.55;
   color: var(--gray);
-  max-width: 250px;
+  max-width: 300px;
 }
 
 .impact-graph figcaption strong {
