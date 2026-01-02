@@ -774,6 +774,53 @@ body {
 }
 
 /* ================================
+   IMPACT PAGE — GRAPH + OUTCOMES ROW
+================================ */
+
+.impact-visual-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 60px;
+  margin: 50px 0 60px;
+}
+
+/* Left column — graph */
+.impact-visual-row .impact-graph {
+  flex: 0 0 300px; /* lock graph width */
+}
+
+/* Right column — outcomes */
+.impact-visual-row .impact-outcomes {
+  flex: 1;
+  margin-top: 6px;
+}
+
+/* ================================
+   IMPACT PAGE — BULLET STYLING
+================================ */
+
+.impact-page ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.impact-page li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.impact-page li::before {
+  content: "●";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  font-size: 9px;
+  color: var(--black);
+}
+
+/* ================================
    IMPACT PAGE — ALIGNMENT FIX
 ================================ */
 
