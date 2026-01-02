@@ -37,7 +37,7 @@ window.addEventListener('scroll', () => {
 });
 
 // Fade-in on scroll for problem & solution pages
-const fadeElements = document.querySelectorAll('.fade-in-line, .solution-header, .solution-card');
+const fadeElements = document.querySelectorAll('.fade-in-line');
 const fadeInOnScroll = () => {
   const triggerBottom = window.innerHeight * 0.85;
 
