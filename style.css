@@ -1135,3 +1135,30 @@ body {
   }
 }
 
+/* ================================
+   GLOBAL FOOTER — PROFESSIONAL
+================================ */
+
+.site-footer {
+  width: 100%;
+  padding: 40px 140px;
+  background: var(--offwhite);
+  border-top: 1.5px solid rgba(0, 0, 0, 0.12);
+}
+
+.footer-inner {
+  max-width: 1200px;
+}
+
+.footer-primary {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: 6px;
+}
+
+.footer-secondary {
+  font-size: 13px;
+  color: var(--gray);
+  line-height: 1.5;
+}
