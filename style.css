@@ -760,17 +760,6 @@ body {
   color: var(--crimson);
 }
 
-/* Subtle fade-in */
-.fade-in {
-  opacity: 0;
-  transform: translateY(14px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
 
 /* OUTCOMES */
 .impact-outcomes {
