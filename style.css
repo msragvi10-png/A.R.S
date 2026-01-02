@@ -163,23 +163,37 @@ body {
 /* MARQUEE */
 .revolving-text {
   overflow: hidden;
-  padding: 80px 0;
+  padding: 60px 0;
   background: var(--offwhite);
 }
 
-.marquee span {
-  display: inline-block;
+.marquee {
+  width: 100%;
+  overflow: hidden;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 22s linear infinite;
+}
+
+.marquee-track span {
   white-space: nowrap;
   font-size: 96px;
   font-weight: 800;
   letter-spacing: 12px;
   color: rgba(184,26,26,0.15);
-  animation: scroll 90s linear infinite;
+  padding-right: 80px;
 }
 
-@keyframes scroll {
-  from { transform: translateX(100%); }
-  to { transform: translateX(-100%); }
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 /* SECTIONS */
