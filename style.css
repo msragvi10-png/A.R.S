@@ -260,6 +260,16 @@ body {
   line-height: 1.6;
 }
 
+/* 🔒 HARD LOCK — Solution Section Header MUST NEVER ANIMATE */
+.solution h2,
+.solution-header h2 {
+  opacity: 1 !important;
+  transform: none !important;
+  animation: none !important;
+  transition: none !important;
+  visibility: visible !important;
+}
+
 /* ================================
    FADE-IN ANIMATION
 ================================= */
