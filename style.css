@@ -840,10 +840,6 @@ body {
    IMPACT PAGE — NASA GRAPH
 ================================ */
 
-.impact-graph {
-  margin: 50px 0 40px;
-}
-
 .impact-graph img {
   width: 100%;
   max-width: 300px;   /* ⬅ about 1/4 screen width */
@@ -872,6 +868,58 @@ body {
   margin-top: 6px;
   font-size: 12px;
   color: #999;
+}
+
+/* ================================
+   IMPACT — GRAPH + BULLETS ALIGNMENT
+================================ */
+
+.impact-visual-row {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+/* Figure behaves like a left-aligned evidence block */
+.impact-graph {
+  margin: 0;
+}
+
+/* Graph image */
+.impact-graph img {
+  width: 100%;
+  max-width: 320px;
+  display: block;
+  border: 1.5px solid #000;
+  border-radius: 10px;
+  background: #fff;
+}
+
+/* Caption stays visually attached to graph */
+.impact-graph figcaption {
+  margin-top: 12px;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--gray);
+  max-width: 320px;
+}
+
+.impact-graph figcaption strong {
+  color: var(--black);
+  font-weight: 600;
+}
+
+.graph-source {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  color: #999;
+}
+
+/* Bullet list vertical alignment */
+.impact-outcomes {
+  margin-top: 6px;
 }
 
 /* ================================
