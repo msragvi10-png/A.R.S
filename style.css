@@ -956,3 +956,93 @@ body {
   font-size: 9px;         /* match dot size elsewhere */
 }
 
+/* ================================
+   TEAM PAGE
+================================ */
+
+.team-page {
+  padding: 180px 140px;
+  background: var(--offwhite);
+}
+
+/* HEADER */
+.team-header {
+  max-width: 900px;
+  margin-bottom: 120px;
+}
+
+.team-header h2 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 64px;
+  font-weight: 800;
+  color: var(--crimson);
+  margin-bottom: 18px;
+}
+
+.team-subtitle {
+  font-size: 20px;
+  color: var(--gray);
+  max-width: 720px;
+}
+
+/* GRID */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 48px;
+}
+
+/* CARD */
+.team-card {
+  background: white;
+  padding: 36px 32px;
+  border-radius: 18px;
+  border: 1.5px solid rgba(0,0,0,0.08);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.06);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+/* NAME */
+.team-card h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--black);
+}
+
+/* ROLE */
+.team-card h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--crimson);
+  margin-bottom: 18px;
+  letter-spacing: 0.3px;
+}
+
+/* FOCUS */
+.team-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--gray);
+}
+
+/* HOVER — subtle, professional */
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 28px 60px rgba(184,26,26,0.18);
+  border-color: rgba(184,26,26,0.35);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .team-page {
+    padding: 140px 60px;
+  }
+
+  .team-header h2 {
+    font-size: 48px;
+  }
+}
