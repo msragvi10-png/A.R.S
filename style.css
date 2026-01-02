@@ -886,3 +886,25 @@ body {
   padding-left: 80px;
   padding-right: 80px;
 }
+
+/* ================================
+   AEROSPACE IMPACT — BULLET FIX ONLY
+================================ */
+
+/* Normalize Aerospace bullet text size */
+#impact .impact-visual-row .impact-outcomes li {
+  font-size: 15px;        /* match other impact bullets */
+  line-height: 1.6;
+}
+
+/* Align bullet list vertically with graph */
+#impact .impact-visual-row .impact-outcomes {
+  margin-top: 22px;       /* lowers list slightly to align with image */
+}
+
+/* Fine-tune bullet dot alignment */
+#impact .impact-visual-row .impact-outcomes li::before {
+  top: 8px;               /* optical vertical centering */
+  font-size: 9px;         /* match dot size elsewhere */
+}
+
