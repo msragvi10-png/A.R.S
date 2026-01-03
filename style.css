@@ -122,12 +122,13 @@ body {
 .hero::before {
   content: "";
   position: absolute;
-  inset: 0;
+  inset: -20%;
   background:
-    radial-gradient(circle at 35% 45%, rgba(184,26,26,0.10), transparent 45%),
-    radial-gradient(circle at 65% 55%, rgba(184,26,26,0.08), transparent 50%),
-    radial-gradient(circle at 50% 30%, rgba(184,26,26,0.06), transparent 55%);
-  filter: blur(40px);
+    radial-gradient(circle at 35% 45%, rgba(184,26,26,0.12), transparent 45%),
+    radial-gradient(circle at 65% 55%, rgba(184,26,26,0.10), transparent 50%),
+    radial-gradient(circle at 50% 30%, rgba(184,26,26,0.08), transparent 55%);
+  filter: blur(60px);
+  animation: auraFlow 28s ease-in-out infinite alternate;
   z-index: 0;
 }
 
@@ -158,6 +159,19 @@ body {
   font-size: 20px;
   margin-bottom: 36px;
 }
+
+@keyframes auraFlow {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-3%, -2%) scale(1.04);
+  }
+  100% {
+    transform: translate(3%, 2%) scale(1.08);
+  }
+}
+
 
 /* BUTTONS */
 .hero-buttons {
