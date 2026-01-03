@@ -1258,29 +1258,6 @@ body {
 
 
 /* ================================
-   DEBUG + FIXED ATTRIBUTION (FORCE)
-================================ */
-
-.site-footer {
-  position: fixed !important;
-  right: 24px !important;
-  bottom: 24px !important;
-
-  padding: 16px 20px !important;
-
-  background: #ffffff !important;
-  color: #000 !important;
-
-  border: 2px solid red !important; /* DEBUG — you will REMOVE later */
-  border-radius: 14px !important;
-
-  z-index: 999999 !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-  display: block !important;
-}
-
-/* ================================
    HERO FLOW — FORCE MOTION
 ================================ */
 
