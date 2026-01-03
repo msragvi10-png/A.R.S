@@ -1203,6 +1203,45 @@ body {
 }
 
 /* ================================
+   MINIMAL FIXED FOOTER — NASA STYLE
+================================ */
+
+.site-footer {
+  position: fixed;
+  bottom: 22px;
+  right: 28px;
+  z-index: 50;
+
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: right;
+}
+
+/* Line 1 — Strong, quiet */
+.footer-primary {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--black);
+  letter-spacing: 0.3px;
+}
+
+/* Line 2 — Contextual, subtle */
+.footer-secondary {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--gray);
+  line-height: 1.4;
+}
+
+
+/* ================================
    DEBUG + FIXED ATTRIBUTION (FORCE)
 ================================ */
 
