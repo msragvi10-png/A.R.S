@@ -1109,39 +1109,46 @@ body {
 ================================ */
 
 .team-follow {
-  margin-top: 40px;
-  text-align: center;
+  margin: 50px auto 0;
+  padding: 18px 28px;
+  max-width: 520px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 16px;
+
   font-size: 15px;
-  color: #444;
+  color: #333;
 }
 
 .team-follow span {
-  margin-right: 8px;
   font-weight: 500;
+  letter-spacing: 0.2px;
 }
 
+/* LinkedIn button */
 .team-follow a {
+  padding: 7px 18px;
+  border: 1.5px solid var(--crimson);
+  border-radius: 999px;
+
   color: var(--crimson);
   text-decoration: none;
   font-weight: 600;
-  border-bottom: 1.5px solid transparent;
-  transition: border-color 0.25s ease;
-}
+  font-size: 14px;
 
-.team-follow a:hover {
-  border-color: var(--crimson);
-}
-
-.team-follow a {
-  padding: 6px 14px;
-  border: 1.5px solid var(--crimson);
-  border-radius: 20px;
+  transition: all 0.25s ease;
 }
 
 .team-follow a:hover {
   background: var(--crimson);
-  color: white;
+  color: #fff;
 }
+
 
 
 /* ================================
