@@ -1132,6 +1132,18 @@ body {
   border-color: var(--crimson);
 }
 
+.team-follow a {
+  padding: 6px 14px;
+  border: 1.5px solid var(--crimson);
+  border-radius: 20px;
+}
+
+.team-follow a:hover {
+  background: var(--crimson);
+  color: white;
+}
+
+
 /* ================================
    REFERENCES PAGE
 ================================ */
