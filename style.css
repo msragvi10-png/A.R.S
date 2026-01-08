@@ -1149,6 +1149,9 @@ body {
   color: #fff;
 }
 
+.team-follow {
+  animation: fadeUp 0.8s ease forwards;
+}
 
 
 /* ================================
