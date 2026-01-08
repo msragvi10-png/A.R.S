@@ -1105,6 +1105,34 @@ body {
 }
 
 /* ================================
+   TEAM — FOLLOW OUR JOURNEY
+================================ */
+
+.team-follow {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 15px;
+  color: #444;
+}
+
+.team-follow span {
+  margin-right: 8px;
+  font-weight: 500;
+}
+
+.team-follow a {
+  color: var(--crimson);
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1.5px solid transparent;
+  transition: border-color 0.25s ease;
+}
+
+.team-follow a:hover {
+  border-color: var(--crimson);
+}
+
+/* ================================
    REFERENCES PAGE
 ================================ */
 
